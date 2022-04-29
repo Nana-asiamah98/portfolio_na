@@ -1,5 +1,5 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap");
 
 body {
   background-color: rgb(34, 40, 49);
@@ -7,38 +7,107 @@ body {
   height: 100%;
 }
 
-.wid-10{
-  width: 50px;
+/* WIDTH */
+
+@media only screen and (min-width: 768px) {
+  .wid-50 {
+    width: 50px;
+  }
+  .wid-100 {
+    width: 100px;
+  }
+  .wid-250 {
+    width: 350px;
+  }
+
+  .ft-10 {
+    font-size: 10px;
+  }
+
+  
+}
+@media only screen and (max-width: 600px) {
+  .wid-50 {
+    width: 25px;
+  }
+
+  .ft-10 {
+    font-size: 10px;
+  }
+}
+
+/* WIDTH */
+
+/* FONT - SIZE */
+
+
+.ft-10 {
+  font-size: 10px;
+}
+.ft-15 {
+  font-size: 15px;
+}
+.ft-20 {
+  font-size: 20px;
+}
+.ft-25 {
+  font-size: 25px;
+}
+.ft-30 {
+  font-size: 30px;
+}
+.ft-35 {
+  font-size: 35px;
 }
 
 /* FONT - SIZE */
 
- .ft-10{
-   font-size: 10px;
- }
- .ft-15{
-   font-size: 15px;
- }
- .ft-20{
-   font-size: 20px;
- }
- .ft-25{
-   font-size: 25px;
- }
- .ft-30{
-   font-size: 30px;
- }
- .ft-35{
-   font-size: 35px;
- }
-
-/* FONT - SIZE */
-
-
 /* FILTER */
 
-.low-exposure{
+.low-exposure {
   filter: brightness(20px);
 }
 /* FILTER */
 
+/* TEXT DECORATION */
+
+a {
+  color: #eeeeee;
+  text-decoration: none;
+}
+a:hover {
+  color: #eeeeee;
+  text-decoration: none;
+}
+a:visited {
+  color: #eeeeee;
+  text-decoration: none;
+}
+/* TEXT DECORATION */
+
+
+/* FADE */
+.cus-transition-enter {
+  opacity: 0;
+}
+.cus-transition-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.cus-transition-exit {
+  opacity: 1;
+}
+.cus-transition-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+/* FADE */
+
+
+/* SPACING */
+
+.sp-10{
+  word-spacing: 10px ;
+}
+
+/* SPACING */
