@@ -5,6 +5,30 @@ import Button from "../Button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NALogo from "../../Assets/images/logo.png";
 import { Link } from "react-router-dom";
+import NavigationLinks from "../Navigations/NavigationLinks";
+/* 
+export  function NavigationLinks() {
+  return (
+    <div className="nav-links">
+      <Link to={"/projects"}>
+        <div className="nav-link">
+          <span className="ft-15">PROJECTS</span>
+          <hr className="wid-50 hr-left-align"></hr>
+        </div>
+      </Link>
+      <div className="nav-link">
+        <span className="ft-15">RESUME</span>
+        <hr className="wid-50 hr-left-align"></hr>
+      </div>
+      <Link to={"/about"}>
+        <div className="nav-link">
+          <span className="ft-15">ABOUT</span>
+          <hr className="wid-50 hr-left-align"></hr>
+        </div>
+      </Link>
+    </div>
+  );
+} */
 
 export default function DarkMenu({ setIsMenuOpened }) {
   return (
@@ -34,24 +58,7 @@ export default function DarkMenu({ setIsMenuOpened }) {
 
         <div className="modal-section-2">
           <div>
-            <div className="nav-links">
-              <Link to={"/projects"} >
-                <div className="nav-link">
-                  <span className="ft-15">PROJECTS</span>
-                  <hr className="wid-50 hr-left-align"></hr>
-                </div>
-              </Link>
-              <div className="nav-link">
-                <span className="ft-15">RESUME</span>
-                <hr className="wid-50 hr-left-align"></hr>
-              </div>
-              <Link to={"/about"}>
-                <div className="nav-link">
-                  <span className="ft-15">ABOUT</span>
-                  <hr className="wid-50 hr-left-align"></hr>
-                </div>
-              </Link>
-            </div>
+            <NavigationLinks/>
           </div>
         </div>
       </div>
