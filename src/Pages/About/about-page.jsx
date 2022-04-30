@@ -1,8 +1,17 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { motion } from "framer-motion";
 import "./about-page.style.css";
+import Button from "../../Components/Button/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars,faXmark } from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import DarkMenu from "../../Components/Modal/DarkMenu";
+
+library.add(faBars,faXmark);
 
 const AboutPage = () => {
+  const [isMenuOpened, setIsMenuOpened] = useState(false);
+
   return (
     <motion.div
       className="container"
@@ -13,7 +22,11 @@ const AboutPage = () => {
       <div className="left-section-about"></div>
       <div className="right-section-about">
         <div className="close-sec">
-        
+          <Button
+            className="hamburger-icon"
+            buttonTitle={<FontAwesomeIcon icon={"bars"} size="3x" />}
+            actionDetail={() => {setIsMenuOpened(true)}}
+          />
         </div>
         <div className="sec-1">
           <div className="section-title">
@@ -27,7 +40,10 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
+        
       </div>
+      
+      {isMenuOpened && (<DarkMenu setIsMenuOpened={setIsMenuOpened}/>)}
     </motion.div>
   );
 };
