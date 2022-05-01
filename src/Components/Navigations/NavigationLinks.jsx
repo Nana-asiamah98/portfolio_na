@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function NavigationLinks() {
   return (
-    <div className="nav-links">
+    <div className="drk-nav-links">
       <Link to={"/projects"}>
         <div className="nav-link">
           <span className="ft-15">PROJECTS</span>

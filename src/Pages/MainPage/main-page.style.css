@@ -64,7 +64,6 @@
   }
   
   .nav-links {
-    display: flex;
     margin-left: auto;
     justify-content: center;
     font-size: 1.5rem;

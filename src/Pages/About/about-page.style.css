@@ -38,12 +38,12 @@
     height: 50%;
   }
 
-  .sec-1 .section-title {
+  .about-sec-1 .section-title {
     padding-top: 70%;
-    padding-left: 150px;
+    padding-left: 10%;
     text-align: left;
     font-family: "Josefin Sans", sans-serif;
-    width: 100%;
+    width: 80%;
   }
 
   .section-title .name-title {
@@ -60,7 +60,7 @@
     height: 50%;
   }
 
-  .nav-links {
+  .drk-nav-links {
     display: flex;
     margin-left: auto;
     justify-content: center;
@@ -122,7 +122,7 @@
     height: 50%;
   }
 
-  .sec-1 .section-title {
+  .about-sec-1 .section-title {
     padding-top: 200px;
     padding-left: 100px;
     text-align: left;
@@ -145,7 +145,7 @@
     height: 50%;
   }
 
-  .nav-links {
+  .about-nav-links {
     margin-left: auto;
   }
 
