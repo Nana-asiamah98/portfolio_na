@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import DarkMenu from "../../Components/Modal/DarkMenu";
+import PageTitle from "../../Utils/PageTitle";
 
 library.add(faBars, faXmark);
 
@@ -19,6 +20,7 @@ const AboutPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
+      <PageTitle title={"About Me"} />
       <div className="left-section-about"></div>
       <div className="right-section-about">
         <div className="close-sec">
