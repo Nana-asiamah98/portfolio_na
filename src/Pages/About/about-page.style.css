@@ -1,6 +1,6 @@
 /* PHONE */
 @media only screen and (max-width: 600px) {
-  .container {
+  .container-about {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -8,7 +8,7 @@
     overflow: hidden;
   }
 
-  .left-section {
+  .left-section-about {
     background-image: url("../../Assets//images/code_desk.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@
     position: fixed;
   }
 
-  .right-section {
+  .right-section-about {
     background-image: url("../../Assets/images/na_logo.png");
     background-size: 50%;
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@
     height: 100%;
   }
 
-  .right-section .sec-1 {
+  .right-section-about .sec-1 {
     height: 50%;
   }
 
@@ -85,7 +85,7 @@
 
 /* TABLET */
 @media only screen and (min-width: 768px) {
-  .container {
+  .container-about {
     display: flex;
     flex-direction: row;
     height: 100vh;
@@ -174,10 +174,8 @@
     padding-right: 10%;
     margin-left: auto;
   }
-
-  
 }
 
-.fa-bars{
+.fa-bars {
   color: wheat;
 }

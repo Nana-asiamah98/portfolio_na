@@ -6,7 +6,7 @@ export default function NavigationLinks() {
     <div className="drk-nav-links">
       <Link to={"/projects"}>
         <div className="nav-link">
-          <span className="ft-15">PROJECTS</span>
+          <span className="ft-15">WORK</span>
           <hr className="wid-50 hr-left-align"></hr>
         </div>
       </Link>
