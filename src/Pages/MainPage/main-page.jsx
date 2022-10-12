@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import "./main-page.style.css";
 import { motion } from "framer-motion";
-import PageTitle from "../../Utils/PageTitle";
+import React from "react";
+import { Link } from "react-router-dom";
 import NaSticker from "../../Assets/images/na-memoji-sticker.png";
+import PageTitle from "../../Utils/PageTitle";
+import "./main-page.style.css";
 
 const MainPage = () => {
   return (
@@ -18,7 +18,7 @@ const MainPage = () => {
       {/* LEFT-SECTION */}
       <div className="left-section">
         <div className="avatar-section">
-          <img src={NaSticker} className="image-section" />
+          <img src={NaSticker} alt="logo" className="image-section" />
         </div>
       </div>
       {/*  END LEFT-SECTION */}
@@ -27,7 +27,7 @@ const MainPage = () => {
         <div className="sec-1">
           <div className="section-title">
             <h1 className="name-title">NANA ASIAMAH</h1>
-            <span>BACKEND DEVELOPER</span>
+            <span>SOFTWARE ENGINEER</span>
           </div>
         </div>
         <div className="sec-2">
@@ -42,7 +42,7 @@ const MainPage = () => {
               to={"#0"}
               onClick={() => {
                 window.open(
-                  "https://drive.google.com/file/d/1MwIffAxUhJ1Koz-bxMX9Yn-ammkdVP81/view?usp=sharing"
+                  "https://drive.google.com/file/d/16XtupdgJL-kFsS7DeCAXgx2WEHqM2VvL/view?usp=sharing"
                 );
               }}
               target="_blank"

@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import { motion } from "framer-motion";
-import "../Modal/modal.style.css";
-import Button from "../Button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import NALogo from "../../Assets/images/logo.png";
+import { motion } from "framer-motion";
+import React from "react";
 import { Link } from "react-router-dom";
+import NALogo from "../../Assets/images/logo.png";
+import Button from "../Button/Button";
+import "../Modal/modal.style.css";
 import NavigationLinks from "../Navigations/NavigationLinks";
 /* 
 export  function NavigationLinks() {

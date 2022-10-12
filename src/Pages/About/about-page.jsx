@@ -1,12 +1,12 @@
-import React, { Component, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import "./about-page.style.css";
-import Button from "../../Components/Button/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useState } from "react";
+import Button from "../../Components/Button/Button";
 import DarkMenu from "../../Components/Modal/DarkMenu";
 import PageTitle from "../../Utils/PageTitle";
+import "./about-page.style.css";
 
 library.add(faBars, faXmark);
 
