@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   font-family: "Josefin Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 .prj-nav {
@@ -34,13 +35,24 @@
 
 .main-section {
   display: flex;
-  width: 1040px;
-  justify-content: space-evenly;
+  width: 100%;
+  justify-content: center;
   flex-wrap: wrap;
+  margin-top: 2%;
 }
 
 .mt-5 {
-  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+  /* overflow: scroll; */
+}
+
+.carousel-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .card-section {
@@ -70,28 +82,35 @@
   gap: 10px;
 }
 
-.card-body-header{
-    margin: 5px;
-    text-transform: capitalize;
-    font-weight: bold;
-    font-size: larger;
+.card-body-header {
+  margin: 5px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: larger;
 }
 
-.card-body-main{
-    margin: 5px;
-    text-transform: capitalize;
-    font-size: medium;
+.card-body-main {
+  margin: 5px;
+  text-transform: capitalize;
+  font-size: medium;
 }
 
-.card-body-footer{
-    display: flex;
-    margin: 5px;
-    text-transform: capitalize;
-    font-size: medium;
+.card-body-footer {
+  display: flex;
+  margin: 5px;
+  flex-direction: column;
+  text-transform: capitalize;
+  font-size: medium;
+  width: 100%;
 }
 
-.card-hyperlink-modal{
-    float: right;
-    border: wheat
+.card-hyperlink-modal {
+  float: right;
+  border-bottom: 1px wheat solid;
+  /* width: 30px; */
+  font-size: 12px;
+}
 
+.cross-line {
+  width: 70%;
 }
