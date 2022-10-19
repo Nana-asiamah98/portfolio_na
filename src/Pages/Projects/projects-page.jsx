@@ -7,9 +7,36 @@ import DarkMenu from "../../Components/Modal/DarkMenu";
 import PageTitle from "../../Utils/PageTitle";
 import "../Projects/project-page.style.css";
 import Carousel from "framer-motion-carousel";
+import { useEffect } from "react";
+import { contentfulClient } from "../../Utils/ContentfulClient";
 
 const ProjectsPage = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
+  const [projects, setProjects] = useState([]);
+
+  const ApiHandler = async () => {
+    const { projectsCollection } = await contentfulClient(null);
+    const { items } = projectsCollection;
+    let mainArr = [];
+    let arr = [];
+    for (let i = 0; i < items.length; i++) {
+      if ((i + 1) % 3 === 0) {
+        arr.push(items[i]);
+        mainArr.push([...arr]);
+        arr.length = 0;
+      } else {
+        arr.push(items[i]);
+      }
+    }
+    mainArr.push([...arr]);
+    console.log(mainArr);
+
+    setProjects([...mainArr]);
+  };
+
+  useEffect(() => {
+    ApiHandler();
+  }, []);
 
   return (
     <motion.div
@@ -42,14 +69,26 @@ const ProjectsPage = () => {
 
         <section className="main-section">
           <div className="mt-5">
-            <Carousel loop={false} autoPlay={false} renderDots={null}>
+            <Carousel loop={false} autoPlay={false} renderDots={() => null}>
+              {projects &&
+                projects.map((val, ind) => (
+                  <div key={ind} className="carousel-section">
+                    {val.map((newVal, newInd) => (
+                      <Card
+                        key={newInd}
+                        img={newVal.projectImages}
+                        description={newVal.description}
+                        title={newVal.projectName}
+                      />
+                    ))}
+                  </div>
+                ))}
               <div className="carousel-section">
                 <Card />
                 <Card />
                 <Card />
               </div>
               <div className="carousel-section">
-                <Card />
                 <Card />
                 <Card />
               </div>
