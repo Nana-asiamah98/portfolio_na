@@ -28,8 +28,9 @@ const AboutPage = () => {
     }`;
     const { aboutCollection } = await contentfulClient(query);
     const { items } = aboutCollection;
-    items.map((val, ind) => {
+    items.map((val) => {
       setAbout(val);
+      return true;
     });
   };
 
