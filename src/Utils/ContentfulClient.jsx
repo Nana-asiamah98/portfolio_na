@@ -11,18 +11,7 @@ export const contentfulClient = async (query) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        query: `query {
-        projectsCollection{
-            items{
-                projectName,
-                description,
-                projectImages{
-                  url,
-                  title
-                }
-            }
-          }
- }`,
+        query: query,
       }),
     }
   );

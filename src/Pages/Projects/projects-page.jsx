@@ -15,10 +15,23 @@ const ProjectsPage = () => {
   const [projects, setProjects] = useState([]);
 
   const ApiHandler = async () => {
-    const { projectsCollection } = await contentfulClient(null);
+    const query = `query {
+      projectsCollection{
+          items{
+              projectName,
+              description,
+              projectImages{
+                url,
+                title
+              }
+          }
+        }
+}`;
+    const { projectsCollection } = await contentfulClient(query);
     const { items } = projectsCollection;
     let mainArr = [];
     let arr = [];
+
     for (let i = 0; i < items.length; i++) {
       if ((i + 1) % 3 === 0) {
         arr.push(items[i]);
@@ -29,8 +42,6 @@ const ProjectsPage = () => {
       }
     }
     mainArr.push([...arr]);
-    console.log(mainArr);
-
     setProjects([...mainArr]);
   };
 
